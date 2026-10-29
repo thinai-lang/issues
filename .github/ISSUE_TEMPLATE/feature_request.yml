@@ -1,0 +1,46 @@
+name: Feature request
+description: Suggest a language, tooling, or documentation improvement
+title: "[feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem first, then the proposed change. Language changes are
+        weighed against the alpha scope and may be deferred.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - Language syntax
+        - Validation rules
+        - Editor experience
+        - CLI
+        - MCP server
+        - Documentation
+        - Examples
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to model or do, and what makes it hard today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Show the syntax or workflow you would like, if applicable.
+      render: thinai
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false

@@ -1,0 +1,25 @@
+name: Documentation issue
+description: Report incorrect, missing, or confusing documentation
+title: "[docs]: "
+labels: ["docs"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      placeholder: https://thinai-lang.github.io/...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: Include the exact wording or example you would expect.
+    validations:
+      required: false

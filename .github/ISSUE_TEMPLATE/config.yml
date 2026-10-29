@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://thinai-lang.github.io/
+    about: Language guides, examples, and alpha notes
+  - name: Report a security vulnerability
+    url: https://github.com/thinai-lang/issues/security/advisories/new
+    about: Report vulnerabilities privately, never in a public issue

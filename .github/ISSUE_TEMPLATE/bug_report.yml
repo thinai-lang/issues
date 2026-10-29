@@ -1,0 +1,67 @@
+name: Bug report
+description: Report a defect in Thinai
+title: "[bug]: "
+labels: ["bug", "needs-repro"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. A small reproduction is the fastest path to a fix.
+        Do not include security vulnerabilities here; see SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Thinai version
+      description: Extension version, CLI version, or commit.
+      placeholder: 0.1.0 (pre-release) / 0.1.0-alpha.1
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where does the issue appear?
+      multiple: true
+      options:
+        - VS Code extension
+        - CLI
+        - MCP server
+        - Language package
+        - Documentation
+        - Examples
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system and editor version
+      placeholder: Windows 11, VS Code 1.95
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Smallest reproduction
+      description: Include the `.tni` model and the steps needed to reproduce.
+      render: thinai
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include diagnostics, logs, or the Thinai output channel.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, related issues, or workarounds.
+    validations:
+      required: false
